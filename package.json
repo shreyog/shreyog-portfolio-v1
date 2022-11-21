@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "private": true,
   "description": "shreyog-portfolio-v1",
-  "author": "yogioctalogic",
+  "author": "shreyog",
   "keywords": [
     "gatsby"
   ],
@@ -22,6 +22,7 @@
     "gatsby": "^5.0.0",
     "gatsby-plugin-emotion": "^8.0.0",
     "gatsby-plugin-google-analytics": "^5.0.0",
+    "gatsby-plugin-google-fonts": "^1.0.1",
     "gatsby-plugin-image": "^3.0.0",
     "gatsby-plugin-manifest": "^5.0.0",
     "gatsby-plugin-mdx": "^5.0.0",
