@@ -27,7 +27,8 @@ const config: GatsbyConfig = {
       options: {
         fonts: [
           `limelight`,
-          `source sans pro\:300,400,400i,700`, // you can also specify font weights and styles
+          `source sans pro`,
+          `open sans\:300,400,500,700`, // you can also specify font weights and styles
         ],
         display: "swap",
       },
