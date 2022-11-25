@@ -1,34 +1,38 @@
 import * as React from "react";
 import type { HeadFC, PageProps } from "gatsby";
-import { ThemeProvider } from "@emotion/react";
+import styled from "@emotion/styled";
 
-import Button from "../components/Button";
-import theme from "../styles/theme";
+import Home from "@/layouts/Home";
+import Button from "@/components/Button";
 
-const pageStyles = {
-  color: "#232129",
-  padding: 96,
-  fontFamily: "-apple-system, Roboto, sans-serif, serif",
-};
+const Main = styled.main({}, (props) => ({
+  height: "100vh",
+  backgroundColor: props.theme.main.primary,
+}));
+
+const Section = styled.section({
+  display: "flex",
+  flexDirection: "column",
+  gap: "12px",
+  width: "600px",
+  margin: "auto",
+});
+
+const TextH3 = styled.h1({ textAlign: "center" }, (props) => ({
+  color: props.theme.text.primary,
+}));
 
 const DesignSystemPage: React.FC<PageProps> = () => {
   return (
-    <ThemeProvider theme={theme}>
-      <main
-        style={{
-          fontFamily: "Source Sans Pro",
-          display: "flex",
-          flexDirection: "column",
-          gap: "12px",
-          width: "600px",
-          margin: "auto",
-        }}
-      >
-        <h3 style={{ textAlign: "center" }}>😎 Components 🚀</h3>
-        <Button variant="outlined">outlined</Button>
-        <Button variant="filled">filled</Button>
-      </main>
-    </ThemeProvider>
+    <Home>
+      <Main>
+        <Section>
+          <TextH3>😎 Components 🚀</TextH3>
+          <Button variant="outlined">outlined</Button>
+          <Button variant="filled">filled</Button>
+        </Section>
+      </Main>
+    </Home>
   );
 };
 
