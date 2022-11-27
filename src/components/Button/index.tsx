@@ -1,80 +1,21 @@
 import * as React from "react";
 import styled from "@emotion/styled";
 
-/* CSS */
-// .button-80 {
-//   background: #fff;
-//   backface-visibility: hidden;
-//   border-radius: .375rem;
-//   border-style: solid;
-//   border-width: .125rem;
-//   box-sizing: border-box;
-//   color: #212121;
-//   cursor: pointer;
-//   display: inline-block;
-//   font-family: Circular,Helvetica,sans-serif;
-//   font-size: 1.125rem;
-//   font-weight: 700;
-//   letter-spacing: -.01em;
-//   line-height: 1.3;
-//   padding: .875rem 1.125rem;
-//   position: relative;
-//   text-align: left;
-//   text-decoration: none;
-//   transform: translateZ(0) scale(1);
-//   transition: transform .2s;
-//   user-select: none;
-//   -webkit-user-select: none;
-//   touch-action: manipulation;
+// display: inline-block;
+// outline: 0;
+// border: 0;
+// cursor: pointer;
+// background: #000000;
+// color: #FFFFFF;
+// border-radius: 8px;
+// padding: 14px 24px 16px;
+// font-size: 18px;
+// font-weight: 700;
+// line-height: 1;
+// transition: transform 200ms,background 200ms;
+// :hover{
+//     transform: translateY(-2px);
 // }
-
-// .button-80:not(:disabled):hover {
-//   transform: scale(1.05);
-// }
-
-// .button-80:not(:disabled):hover:active {
-//   transform: scale(1.05) translateY(.125rem);
-// }
-
-// .button-80:focus {
-//   outline: 0 solid transparent;
-// }
-
-// .button-80:focus:before {
-//   content: "";
-//   left: calc(-1*.375rem);
-//   pointer-events: none;
-//   position: absolute;
-//   top: calc(-1*.375rem);
-//   transition: border-radius;
-//   user-select: none;
-// }
-
-// .button-80:focus:not(:focus-visible) {
-//   outline: 0 solid transparent;
-// }
-
-// .button-80:focus:not(:focus-visible):before {
-//   border-width: 0;
-// }
-
-// .button-80:not(:disabled):active {
-//   transform: translateY(.125rem);
-// }
-
-// const Button = styled.button<{
-//   fontSize?: string | number;
-// }>(
-//   {
-//     padding: "0.5rem 2rem",
-//     color: "darkorchid",
-//   },
-//   (props) => ({
-//     fontSize: props.fontSize,
-//   })
-// );
-
-// export default Button;
 
 export const btnStyles = {
   display: "inline-block",
@@ -98,84 +39,28 @@ export const btnStyles = {
 const Button = styled.button<ButtonProps>(
   {
     display: "inline-block",
-    padding: ".875rem 1.125rem",
-    position: "relative",
+    outline: 0,
+    border: 0,
     cursor: "pointer",
-    backfaceVisibility: "hidden",
-    textAlign: "left",
-    textDecoration: "none",
-    transform: "translateZ(0) scale(1)",
-    transition: "transform .2s",
-    userSelect: "none",
-    "-webkit-user-select": "none",
-    touchAction: "manipulation",
-    fontSize: "1.125rem",
+    borderRadius: "8px",
+    padding: "0.875rem 1.5rem 1rem",
+    fontSize: "18px",
     fontWeight: 700,
-    letterSpacing: "-.01em",
-    lineHeight: "1.3",
-
-    "&:disabled": {
-      color: "#787878",
-      cursor: "auto",
+    lineHeight: 1,
+    transition: "transform 200ms,background 200ms",
+    "&:hover": {
+      transform: "translateY(-2px)",
     },
   },
   (props) => ({
-    ...(props.variant === "outlined" && {
-      background: "#fff",
-      borderRadius: ".375rem",
-      borderStyle: "solid",
-      borderWidth: ".125rem",
-      color: "#212121",
-
-      "&:not(:disabled):hover:active": {
-        transform: "scale(1.05) translateY(.125rem)",
-      },
-      "&:focus": {
-        outline: "0 solid transparent",
-      },
-      "&:focus:before": {
-        content: '""',
-        left: "calc(-1*.375rem)",
-        pointerEvents: "none",
-        position: "absolute",
-        top: "calc(-1*.375rem)",
-        transition: "border-radius",
-        userSelect: "none",
-      },
-      "&:focus:not(:focus-visible)": {
-        outline: "0 solid transparent",
-      },
-      "&:focus:not(:focus-visible):before": {
-        borderWidth: 0,
-      },
-      "&:not(:disabled):active": {
-        transform: "translateY(.125rem)",
-      },
-    }),
     ...(props.variant === "filled" && {
-      background: "#332cf2",
-      border: 0,
-      borderRadius: ".375rem",
-      color: "#ffffff",
-      //   "&:not(:disabled):hover": {
-      //     transform: "scale(1.05)",
-      //   },
-      "&:not(:disabled):hover:active": {
-        transform: "scale(1.05) translateY(.125rem)",
-      },
-      "&:focus": { outline: " 0 solid transparent" },
-      "&:focus:before": {
-        borderWidth: ".125rem",
-        content: "''",
-        left: "calc(-1*.375rem)",
-        pointerEvents: "none",
-        position: "absolute",
-        top: "calc(-1*.375rem)",
-        transition: "borderRadius",
-        userSelect: "none",
-      },
-      "&:focus:not(:focus-visible)": { outline: "0 solid transparent" },
-      "&:not(:disabled):active": { transform: "translateY(.125rem)" },
+      background: props.theme.highlight.primary,
+      color: props.theme.text.primary,
+    }),
+    ...(props.variant === "outlined" && {
+      background: "transparent",
+      color: props.theme.highlight.primary,
+      boxShadow: `0 0 0 3px ${props.theme.highlight.primary} inset`,
     }),
   })
 );
