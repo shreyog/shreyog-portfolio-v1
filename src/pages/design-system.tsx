@@ -4,6 +4,7 @@ import styled from "@emotion/styled";
 
 import Home from "@/layouts/Home";
 import Button from "@/components/Button";
+import Input from "@/components/Input";
 
 const Main = styled.main({}, (props) => ({
   height: "100vh",
@@ -30,6 +31,7 @@ const DesignSystemPage: React.FC<PageProps> = () => {
           <TextH3>😎 Components 🚀</TextH3>
           <Button variant="outlined">outlined</Button>
           <Button variant="filled">filled</Button>
+          <Input placeholder={"Input"} />
         </Section>
       </Main>
     </Home>
