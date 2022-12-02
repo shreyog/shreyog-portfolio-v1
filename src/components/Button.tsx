@@ -1,8 +1,6 @@
 import * as React from "react";
 import styled from "@emotion/styled";
 
-import { THEME_MODES } from "@/constants/themeModes";
-
 const Button = styled.button<ButtonProps>(
   {
     display: "inline-block",
@@ -21,16 +19,13 @@ const Button = styled.button<ButtonProps>(
   },
   (props) => ({
     ...(props.variant === "filled" && {
-      background: props.theme.highlight.primary,
-      color:
-        props.theme.mode === THEME_MODES.LIGHT
-          ? props.theme.main.primary
-          : props.theme.text.primary,
+      background: "var(--clr-accent)",
+      color: "#fffffe",
     }),
     ...(props.variant === "outlined" && {
       background: "transparent",
-      color: props.theme.highlight.primary,
-      boxShadow: `0 0 0 3px ${props.theme.highlight.primary} inset`,
+      color: "var(--clr-accent)",
+      boxShadow: `0 0 0 3px var(--clr-accent) inset`,
     }),
   })
 );

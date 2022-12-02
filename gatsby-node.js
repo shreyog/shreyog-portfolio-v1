@@ -16,6 +16,7 @@ exports.onCreateWebpackConfig = ({ actions }) => {
         "@/helpers": path.resolve(__dirname, "src/helpers"),
         "@/utils": path.resolve(__dirname, "src/utils"),
         "@/styles": path.resolve(__dirname, "src/styles"),
+        "@/contexts": path.resolve(__dirname, "src/contexts"),
       },
     },
   });

@@ -113,7 +113,8 @@
       "@/config/*": ["./config/*"],
       "@/helpers/*": ["./helpers/*"],
       "@/utils/*": ["./utils/*"],
-      "@/styles/*": ["./styles/*"]
+      "@/styles/*": ["./styles/*"],
+      "@/contexts/*": ["./contexts/*"]
     }
   },
   "include": [

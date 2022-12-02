@@ -2,14 +2,14 @@ import * as React from "react";
 import type { HeadFC, PageProps } from "gatsby";
 import styled from "@emotion/styled";
 
-import Home from "@/layouts/Home";
+import HomeLayout from "@/layouts/HomeLayout";
 import Button from "@/components/Button";
 import Input from "@/components/Input";
 
-const Main = styled.main({}, (props) => ({
+const Main = styled.main({
   height: "100vh",
-  backgroundColor: props.theme.main.primary,
-}));
+  backgroundColor: "var(--clr-background-main)",
+});
 
 const Section = styled.section({
   display: "flex",
@@ -19,13 +19,14 @@ const Section = styled.section({
   margin: "auto",
 });
 
-const TextH3 = styled.h1({ textAlign: "center" }, (props) => ({
-  color: props.theme.text.primary,
-}));
+const TextH3 = styled.h1({
+  textAlign: "center",
+  color: "var(--clr-text-main)",
+});
 
 const DesignSystemPage: React.FC<PageProps> = () => {
   return (
-    <Home>
+    <HomeLayout>
       <Main>
         <Section>
           <TextH3>😎 Components 🚀</TextH3>
@@ -34,7 +35,7 @@ const DesignSystemPage: React.FC<PageProps> = () => {
           <Input placeholder={"Input"} />
         </Section>
       </Main>
-    </Home>
+    </HomeLayout>
   );
 };
 

@@ -1,6 +1,8 @@
 module.exports = {
+  parser: "@typescript-eslint/parser",
   parserOptions: {
     ecmaVersion: "latest",
+    sourceType: "module",
   },
   settings: {
     "import/resolver": {
@@ -21,7 +23,13 @@ module.exports = {
         ["@/helpers", "./src/helpers"],
         ["@/utils", "./src/utils"],
         ["@/styles", "./src/styles"],
+        ["@/contexts", "./src/contexts"],
       ],
     },
+  },
+  env: {
+    browser: true,
+    node: true,
+    es2020: true,
   },
 };
