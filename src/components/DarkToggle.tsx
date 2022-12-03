@@ -7,8 +7,6 @@ import { THEME_MODES } from "@/constants/themeModes";
 const DarkToggle = () => {
   const themeCtx = useContext(ThemeContext);
 
-  console.log("themeCtx", themeCtx)
-
   if (!themeCtx) return <></>;
 
   if (!themeCtx.colorMode) {

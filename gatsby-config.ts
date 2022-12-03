@@ -57,14 +57,6 @@ const config: GatsbyConfig = {
       },
       __key: "components",
     },
-    {
-      resolve: "gatsby-source-filesystem",
-      options: {
-        name: "styles",
-        path: "./src/styles/",
-      },
-      __key: "styles",
-    },
   ],
 };
 
