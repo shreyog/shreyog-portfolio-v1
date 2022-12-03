@@ -1,4 +1,5 @@
-import * as React from "react";
+import * as React from "react"
+
 import type { HeadFC, PageProps } from "gatsby";
 
 import HomeLayout from "@/layouts/HomeLayout";
