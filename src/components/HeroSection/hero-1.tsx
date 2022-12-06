@@ -3,7 +3,7 @@ import styled from "@emotion/styled";
 
 const HeroWrapper = styled.div({
   display: "grid",
-  gridTemplateColumns: "1fr repeat(12, minmax(min-content, 5rem)) 1fr",
+  gridTemplateColumns: "1fr repeat(12, minmax(min-content, 6rem)) 1fr",
   position: "relative",
 });
 
